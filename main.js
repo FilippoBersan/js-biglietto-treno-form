@@ -10,6 +10,7 @@ console.log(inputChilometri.value);
 
 console.log(inputEta.value);
 
+/*
 inputChilometri.addEventListener('keypress', function (e) {
   console.log('km');
   console.log(e.key);
@@ -19,12 +20,23 @@ inputEta.addEventListener('keypress', function (e) {
   console.log('eta');
   console.log(e.key);
 });
+*/
 
 const inputGenera = document.querySelector('input[type="button"]');
-console.log(inputGenera);
-inputGenera.addEventListener('keypress', function (e) {
-  console.log('prezzo');
-  console.log(e.key);
+
+inputGenera.addEventListener('click', function (e) {
+  console.log(inputChilometri.value);
+  console.log(inputEta.value);
+  console.log(prezzoBiglietto.value0f);
+
+  if (inputEta.value <= 18) {
+    sconto20;
+    console.log({ sconto20 });
+  } else if (inputEta.value >= 65) {
+    sconto40;
+    console.log({ sconto40 });
+  } else inputEta.value;
+  prezzoBiglietto;
 });
 
 // 3. salvo in una variabile il numero di chilometri
@@ -40,7 +52,7 @@ const prezzoalKm = '0.12';
 
 // 6. calcolo prezzo biglietto
 const prezzoBiglietto = numeroChilometri * prezzoalKm;
-console.log({ prezzoBiglietto });
+console.log(prezzoBiglietto.value);
 
 // 7. istruzione condizionale
 //  -SE IL PASSEGGERO HA MENO DI 18 ANNI SCONTO DEL 20%
@@ -55,13 +67,4 @@ const calcoloSconto40 = (prezzoBiglietto * 40) / 100;
 
 const sconto40 = prezzoBiglietto - calcoloSconto40;
 
-if (numeroEta <= 18) {
-  sconto20;
-  console.log({ sconto20 });
-} else if (numeroEta >= 65) {
-  sconto40;
-  console.log({ sconto40 });
-} else numeroEta;
-prezzoBiglietto;
-
-console.log('il prezzo del biglietto è', prezzoBiglietto.toFixed(2));
+// console.log('il prezzo del biglietto è', prezzoBiglietto.toFixed(2));
