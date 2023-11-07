@@ -2,20 +2,39 @@
 
 // Calcolo del prezzo del biglieggto del treno
 
-// 1. mostro un prompt per il numero chilometri da percorrere
-const chilometri = parseFloat(prompt('Inserisci chilometri da percorrere'));
+const inputChilometri = document.querySelector('input[type="text"]');
 
-// 2. mostro un prompt per l'età del passeggero
-const eta = parseFloat(prompt('Inserisci età del passeggero'));
+const inputEta = document.querySelector('input[type="text2"]');
+
+console.log(inputChilometri.value);
+
+console.log(inputEta.value);
+
+inputChilometri.addEventListener('keypress', function (e) {
+  console.log('km');
+  console.log(e.key);
+});
+
+inputEta.addEventListener('keypress', function (e) {
+  console.log('eta');
+  console.log(e.key);
+});
+
+const inputGenera = document.querySelector('input[type="button"]');
+console.log(inputGenera);
+inputGenera.addEventListener('keypress', function (e) {
+  console.log('prezzo');
+  console.log(e.key);
+});
 
 // 3. salvo in una variabile il numero di chilometri
-const numeroChilometri = chilometri;
+const numeroChilometri = inputChilometri;
 
 // 4. salvo in una variabile l'età del passeggero
-const numeroEta = eta;
+const numeroEta = inputEta;
 
-console.log({ chilometri });
-console.log({ eta });
+console.log({ numeroChilometri });
+console.log({ numeroEta });
 // 5. il prezzo del biglietto sarà definito in base ai km 0.21
 const prezzoalKm = '0.12';
 
@@ -37,12 +56,12 @@ const calcoloSconto40 = (prezzoBiglietto * 40) / 100;
 const sconto40 = prezzoBiglietto - calcoloSconto40;
 
 if (numeroEta <= 18) {
-  alert(sconto20);
+  sconto20;
   console.log({ sconto20 });
 } else if (numeroEta >= 65) {
-  alert(sconto40);
+  sconto40;
   console.log({ sconto40 });
 } else numeroEta;
-alert(prezzoBiglietto);
+prezzoBiglietto;
 
 console.log('il prezzo del biglietto è', prezzoBiglietto.toFixed(2));
