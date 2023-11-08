@@ -9,19 +9,23 @@
   <body>
     <div class="container-form">
       <div class="box-km">
-        <h3>Km da percorrere</h3>
-        <input type="text" value="km" />
+        <label for="km">Km da percorrere</label>
+        <input type="text" id="km" />
       </div>
 
       <div class="box-eta">
-        <h3>Inserisci l'età</h3>
-        <input type="text2" value="età" />
+        <select name="" id="eta">
+          <option value="minorenne">Minorenne</option>
+          <option value="maggiorenne">Maggiorenne</option>
+          <option value="over65">Over 65</option>
+        </select>
       </div>
     </div>
     <div class="container-invio">
       <div class="box-eta">
         <h3>Genera Biglietto</h3>
-        <input type="button" value="genera" />
+        <button id="genera">Genera</button>
+        <button id="annulla">Annulla</button>
       </div>
     </div>
     <div class="prezzofinale"></div>
